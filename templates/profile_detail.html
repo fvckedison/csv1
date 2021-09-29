@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                <div class="card bg-default">
+                    <a href= "modify{{profile.id}}">
+                        <div style="height:100%;width:100%">
+                            修改
+                        </div>
+                        </a> 
+                    <h5 class="card-header">
+                        filename: {{profile.filename}}
+                    </h5>
+                    <div class="card-footer">
+                        PhotoName: {{profile.photoName}}
+                    </div>
+                    <div class="card-footer">
+                        Filter: {{profile.filter}}
+                    </div>
+                    <div class="card-footer">
+                        ShootingDate: {{profile.shootingDate}}
+                    </div>
+                    <div class="card-footer">
+                        ShootingLocation: {{profile.shootinLocation}}
+                    </div>
+                    <div class="card-footer">
+                        Width: {{profile.width}}
+                    </div>
+                    <div class="card-footer">
+                        Height: {{profile.height}}
+                    </div>
+                    <div class="card-footer">
+                        Strain: {{profile.strain}}
+                    </div>
+                    <div class="card-footer">
+                        Camera: {{profile.camera}}
+                    </div>
+                    <div class="card-footer">
+                        ShootingTime: {{profile.shootingTime}}
+                    </div>
+                    <div class="card-footer">
+                        ExposureTime: {{profile.exposureTime}}
+                    </div>
+                    <div class="card-footer">
+                        Aperture: {{profile.aperture}}
+                    </div>
+                    <div class="card-footer">
+                        Exposure: {{profile.exposure}}
+                    </div>
+                    <div class="card-footer">
+                        ISO: {{profile.ISO}}
+                    </div>
+                    <div class="card-footer">
+                        FocalLength: {{profile.focalLength}}
+                    </div>
+                    <div class="card-footer">
+                        ShootingArea: {{profile.shootingArea}}
+                    </div>
+                    <div class="card-footer">
+                        Disease: {{profile.disease}}
+                    </div>
+                    <div class="card-footer">
+                        PlantsNumber: {{profile.plantsNumber}}
+                    </div>
+                    <div class="card-footer">
+                        ShootingFunction: {{profile.shootingFunction}}                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    
+
+</body>
+</html>

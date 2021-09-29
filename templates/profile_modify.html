@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                    <form action="" method="post" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      {% comment %} <div class="form-group mt-4" data-aos="fade-up" data-aos-delay="400">
+                        <input name="username" type="text" class="form-control" 
+                        		id="username"  placeholder="帳號" minlength="5" required>
+                        <input name="password" type="password" class="form-control" 
+                        		id="password" placeholder="密碼" required>
+
+                        <small id="msg" class="form-text text-danger">{{message}}</small>
+
+                      </div> {% endcomment %}
+                                        <div class="card bg-default">
+                    <h5 class="card-header">
+                        <label for="fname">ID:</label>
+                        <input class="card-header" value= {{profile.id}} name="id" id="id"></input>
+                    </h5>
+                    <h5 class="card-header">
+                        <label for="fname">Filename:</label>
+                        <input class="card-header" value= {{profile.filename}} name="filename" id="filename"></input>
+                    </h5>
+                    <div class="card-footer">
+                        <label for="fname">PhotoName:</label>
+                        <input class="card-header" value= {{profile.photoName}} name="photoName" id="photoName"></input>
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">Filter:</label>
+                        <input class="card-header" value= {{profile.filter}} name="filter" id="filter"></input>
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">ShootingDate: </label>
+                        <input class="card-header" value= {{profile.shootingDate}} name="shootingDate" id="shootingDate"></input>
+                    </div>
+                    <div class="card-footer">      
+                        <label for="fname">ShootingLocation: </label>
+                        <input class="card-header" value= {{profile.shootinLocation}} name="shootinLocation" id="shootinLocation"></input>
+                    </div>
+                    <div class="card-footer">    
+                        <label for="fname">Width: </label>
+                        <input class="card-header" value= {{profile.width}} name="width" id="width"></input>
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">Height: </label>
+                        <input class="card-header" value= {{profile.height}} name="height" id="height"></input>
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">Strain: </label>
+                        <input class="card-header" value= {{profile.strain}} name="strain" id="strain"></input>
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">Camera: </label>
+                        <input class="card-header" value= {{profile.camera}} name="camera" id="camera"></input>
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">ShootingTime:</label>
+                        <input class="card-header" value= {{profile.shootingTime}} name="shootingTime" id="shootingTime">></input> 
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">ExposureTime:</label>
+                        <input class="card-header" value= {{profile.exposureTime}} name="exposureTime" id="exposureTime"></input> 
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">Aperture:</label>
+                        <input class="card-header" value= {{profile.aperture}} name="aperture" id="aperture"></input> 
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">Exposure:</label>
+                        <input class="card-header" value= {{profile.exposure}} name="exposure" id="exposure"></input> 
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">ISO:</label>
+                        <input class="card-header" value= {{profile.ISO}} name="ISO" id="ISO"></input> 
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">FocalLength:</label>
+                        <input class="card-header" value= {{profile.focalLength}} name="focalLength" id="focalLength"></input> 
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">ShootingArea:</label>
+                        <input class="card-header" value= {{profile.shootingArea}} name="shootingArea" id="shootingArea"></input>
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">Disease:</label>
+                        <input class="card-header" value= {{profile.disease}} name="disease" id="disease"></input>
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">PlantsNumber:</label>
+                        <input class="card-header" value= {{profile.plantsNumber}} name="plantsNumber" id="plantsNumber"></input>
+                    </div>
+                    <div class="card-footer">
+                        <label for="fname">ShootingFunction:</label>
+                        <input class="card-header" value= {{profile.shootingFunction}} name="shootingFunction" id="shootingFunction"></input>                  
+                    </div>
+                </div>
+
+
+                        <button type="submit" data-aos="fade-up" data-aos-delay="500" class="btn w-100 mt-3">完成</button>
+                    </form>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    
+
+</body>
+</html>
