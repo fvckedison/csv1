@@ -1,87 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>資料</title>
+    <link rel="shortcut icon" href="icon/plant.svg" />
+    <link rel="bookmark" href="icon/plant.svg" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-                <div class="card bg-default">
-                    <a href= "/modify{{profile.id}}">
-                        <div style="height:100%;width:100%">
-                            修改
-                        </div>
-                        </a> 
-                    <h5 class="card-header">
-                        filename: {{profile.filename}}
-                    </h5>
-                    <div class="card-footer">
-                        PhotoName: {{profile.photoName}}
-                    </div>
-                    <div class="card-footer">
-                        Filter: {{profile.filter}}
-                    </div>
-                    <div class="card-footer">
-                        ShootingDate: {{profile.shootingDate}}
-                    </div>
-                    <div class="card-footer">
-                        ShootingLocation: {{profile.shootinLocation}}
-                    </div>
-                    <div class="card-footer">
-                        Width: {{profile.width}}
-                    </div>
-                    <div class="card-footer">
-                        Height: {{profile.height}}
-                    </div>
-                    <div class="card-footer">
-                        Strain: {{profile.strain}}
-                    </div>
-                    <div class="card-footer">
-                        Camera: {{profile.camera}}
-                    </div>
-                    <div class="card-footer">
-                        ShootingTime: {{profile.shootingTime}}
-                    </div>
-                    <div class="card-footer">
-                        ExposureTime: {{profile.exposureTime}}
-                    </div>
-                    <div class="card-footer">
-                        Aperture: {{profile.aperture}}
-                    </div>
-                    <div class="card-footer">
-                        Exposure: {{profile.exposure}}
-                    </div>
-                    <div class="card-footer">
-                        ISO: {{profile.ISO}}
-                    </div>
-                    <div class="card-footer">
-                        FocalLength: {{profile.focalLength}}
-                    </div>
-                    <div class="card-footer">
-                        ShootingArea: {{profile.shootingArea}}
-                    </div>
-                    <div class="card-footer">
-                        Disease: {{profile.disease}}
-                    </div>
-                    <div class="card-footer">
-                        PlantsNumber: {{profile.plantsNumber}}
-                    </div>
-                    <div class="card-footer">
-                        ShootingFunction: {{profile.shootingFunction}}                       
-                    </div>
-                </div>
+    <div class="container">
+        <nav aria-label="breadcrumb" class="bread-header">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="/profile_upload_refine.html">首頁</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">相片檢索</li>
+          </ol>
+        </nav>
+        <section class="data-info">
+          <h2>photoName</h2>
+          <img src="https://picsum.photos/800/800/?random=1" class="info-img" />
+          <h4>詳細資料</h4>
+          <div class="row">
+            <div class="col-3">
+              <p>filename:</p>
             </div>
-        </div>
-    </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.filename}}</p>
+            </div>
+            <div class="col-3">
+              <p>PhotoName:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.photoName}}</p>
+            </div>
+            <div class="col-3">
+              <p>Filter:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.filter}}</p>
+            </div>
+            <div class="col-3">
+              <p>ShootingDate:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.shootingDate}}</p>
+            </div>
+            <div class="col-3">
+              <p>ShootingLocation:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.shootinLocation}}</p>
+            </div>
+            <div class="col-3">
+              <p>Width:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.width}}</p>
+            </div>
+            <div class="col-3">
+              <p>Height:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.height}}</p>
+            </div>
+            <div class="col-3">
+              <p>Strain:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.strain}}</p>
+            </div>
+            <div class="col-3">
+              <p>Camera:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.camera}}</p>
+            </div>
+            <div class="col-3">
+              <p>ShootingTime:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.shootingTime}}</p>
+            </div>
+            <div class="col-3">
+              <p>ExposureTime:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.exposureTime}}</p>
+            </div>
+            <div class="col-3">
+              <p>Aperture:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.aperture}}</p>
+            </div>
+            <div class="col-3">
+              <p>Exposure:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.exposure}}</p>
+            </div>
+            <div class="col-3">
+              <p>ISO:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.ISO}}</p>
+            </div>
+            <div class="col-3">
+              <p>FocalLength:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.focalLength}}</p>
+            </div>
+            <div class="col-3">
+              <p>ShootingArea:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.shootingArea}}</p>
+            </div>
+            <div class="col-3">
+              <p>Disease:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.disease}}</p>
+            </div>
+            <div class="col-3">
+              <p>PlantsNumber:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.plantsNumber}}</p>
+            </div>
+            <div class="col-3">
+              <p>ShootingFunction:</p>
+            </div>
+            <div class="col-7 align-self-center">
+              <p class="ms-2">{{profile.shootingFunction}}</p>
+            </div>
+          </div>
+          <a
+            class="btn btn-primary my-2 ms-2 me-2"
+            role="button"
+            href="/modify{{profile.id}}"
+            >修改</a
+          >
+        </section>
+      </div>
+      <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
+      <script>
+        window.addEventListener("load", onVrViewLoad);
+  
+        function onVrViewLoad() {
+          // Selector '#vrview' finds element with id 'vrview'.
+          var vrView = new VRView.Player("#vrview", {
+            image: "test.jpg",
+            width: "95%",
+            height: "300px",
+          });
+        }
+      </script>
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    
+
 
 </body>
+
 </html>
